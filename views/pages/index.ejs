@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>BNswap</title>
+		<link rel="preconnect dns-prefetch" href="https://api.creeper.banano.cc">
+		<link rel="preconnect dns-prefetch" href="https://rainstorm.city">
+		<%- include("../partials/head"); %>
+		<script type="text/javascript" src="/web/index.js"></script>
+		<script type="text/javascript" src="/web/bigrat.js"></script>
+	</head>
+	<body>
+		<div class="main">
+			<%- include("../partials/header"); %>
+			<p>Exchange Nano to Banano with 1% fees</p>
+			<a href="./buy"><button type="button" class="lbtn idxbtn">
+				buy banano<br>
+				<small id="buyratio">(1 NANO : ??? BAN)</small>
+			</button></a>
+			<a href="./sell"><button type="button" class="lbtn idxbtn">
+				sell banano<br>
+				<small id="sellratio">(??? BAN : 1 NANO)</small>
+			</button></a>
+			<p>Max buy:
+				<a id="buyAllowance" class="inlink" href="https://creeper.banano.cc/explorer/account/ban_3a1dokzzuc334kpsedakxz5hw4cauexjori8spcf7pninujry43dxkbam4o6/history">
+				   ??? NANO</a>;
+				Max sell:
+				<a id="sellAllowance" class="inlink" href="https://www.nanolooker.com/account/nano_3htoq7firg6b1oeekyeujqsnksftkg45mzqsmhn99ucp1787c8oior6qq8ck">
+				   ### BAN
+				</a>
+			</p>
+			<%- include("../partials/footer"); %>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>BNswap - <%= buy ? "Buy status" : "Sell status"%></title>
+		<%- include("../partials/head"); %>
+		<script type="text/javascript" src="/web/check.js"></script>
+		<script type="text/javascript" src="/web/qrcode.min.js"></script>
+		<script type="text/javascript" src="/web/bigrat.js"></script>
+		<link rel="stylesheet" href="/web/check.css">
+		<!--http://peterolson.github.com/BigRational.js/BigInt_BigRat.min.js"-->
+	</head>
+	<body>
+		<div class="main">
+			<%- include("../partials/header"); %>
+			<div class="msg" id="load">
+				<p>Processing...</p>
+			</div>
+			<div class="msg" id="process" hidden>
+				<p>Transaction in progress</p>
+				<p>Refresh for updates</p>
+			</div>
+			<div class="msg" id="err" hidden><p class="white"><strong>Error</strong></p>
+				<div id="errtext"></div>
+			</div>
+			<div hidden id="nosend">
+				<p>Send <%= buy ? "NANO" : "BANANO" %> to this one-time account and click 'Check'.</p>
+				<div class="addrcontainer">
+					<input type="text" id="addr" size="64" readonly>
+					<button type="button" id="cpBtn">
+						<img src="/web/clipboard.svg" width="13" height="13" alt="Copy to clipboard">
+					</button>
+				</div>
+				<div id="qrcode"></div>
+			</div>
+			<div class="msg" id="successnoinfo" hidden>
+				<p>Success</p>
+			</div>
+			<div class="msg" id="sent" hidden></div>
+			<p id="sendallowed" hidden>Send between ??? and ### <%= buy ? "NANO" : "BANANO" %></p>
+			<p id="txid">Transaction private key: ############</p>
+			<a id="reload" href="javascript:window.location.reload(true)" hidden><button type="button" class="lbtn chkbtn">check</button></a>
+			<a href="/buy"><button type="button" class="lbtn chkbtn">back</button></a>
+			<%- include("../partials/footer"); %>
+		</div>
+	</body>
+</html>
