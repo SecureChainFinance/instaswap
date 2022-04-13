@@ -1,0 +1,1 @@
+Contains encrypted JSON data, keys are "xnoseed", "xnoaddress", "xbnseed", "xbnaddress", "key" (used to encrypt stuff in database), "dbpassword"

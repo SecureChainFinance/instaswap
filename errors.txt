@@ -1,0 +1,13 @@
+// Transaction status:
+// -2: Unrecoverable database error
+// -1: Invalid address
+// 0: Trade just begun, base crypto not yet sent by user
+// 1: Received by intermediary
+// 2: Sent to main wallet
+// 3: Trade complete
+// 4: Failed receiving
+// 5: Failed sending
+// 6: Failed sending target crypto
+// 7: Unrecoverable error
+// 8: Sent too much
+// 9: CoinGecko error
